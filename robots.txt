@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://braunfordiamondbar.com/sitemap.xml
