@@ -101,17 +101,11 @@ h2 { font-size: 2.5rem; }
 }
 
 .site-logo { 
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   font-size: 1.5rem; 
   font-weight: 700; 
   color: var(--primary-color); 
-}
-
-.site-logo .logo-icon {
-  color: var(--accent-color);
-  flex-shrink: 0;
+  text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
 .site-nav ul { 
