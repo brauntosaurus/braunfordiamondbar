@@ -217,3 +217,36 @@ h2 { font-size: 2.5rem; }
     gap: 3rem;
   }
 }
+/* Force 4-column layout on desktop */
+@media (min-width: 1025px) {
+  /* Expand parent container width so 4 cards fit comfortably */
+  .priorities-section .container {
+    max-width: 1280px !important;
+    width: 100%;
+  }
+
+  /* Force grid to exactly 4 equal columns */
+  .priorities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* Tablet Layout (2x2) */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .priorities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+/* Mobile Layout (Stacked 1x1) */
+@media (max-width: 640px) {
+  .priorities-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
