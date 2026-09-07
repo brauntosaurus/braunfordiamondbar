@@ -60,6 +60,42 @@ h2 { font-size: 2.5rem; }
 .hero-content .intro { font-size: 1.1rem; margin-bottom: 2rem; }
 .hero-actions { display: flex; gap: 1rem; margin-top: 2rem; }
 
+/* =========================================================
+   YELLOW ELECT SPLASH
+   ========================================================= */
+.campaign-name__elect {
+  position: relative;
+  z-index: 2;
+  place-self: start;
+
+  padding: 0.65em 1.05em 0.58em 1.08em;
+  background: #f2c14e;
+  color: #123b60;
+
+  font-size: clamp(0.9rem, 0.25em, 1.45rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  clip-path: polygon(
+    4% 12%,
+    100% 0,
+    96% 74%,
+    91% 72%,
+    91% 86%,
+    2% 100%,
+    4% 63%,
+    0 62%
+  );
+
+  /* Desktop position */
+  transform: translate(-10%, -82%) rotate(-7deg);
+  transform-origin: center;
+  display: inline-block;
+}
+
 /* ==========================================================================
    Stats Bar
    ========================================================================== */
