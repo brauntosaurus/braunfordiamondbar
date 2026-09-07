@@ -338,7 +338,7 @@ h2 { font-size: 2.5rem; }
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -348,7 +348,7 @@ h2 { font-size: 2.5rem; }
 
 .endorsement-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   border-color: var(--secondary-color);
 }
 
