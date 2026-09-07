@@ -227,33 +227,43 @@
   </a>
 </div>
 
-      <!-- Card 2: Social Media -->
-      <div class="card social-card">
-        <div class="card-content">
-          <span class="kicker">ON SOCIAL MEDIA</span>
-          <h3>Out in the Community</h3>
-          
-          <div class="instagram-embed-wrapper">
-            <blockquote 
-              class="instagram-media" 
-              data-instgrm-permalink="https://www.instagram.com/p/DcwUXEuvLYY" 
-              data-instgrm-version="14">
-            </blockquote>
-            <script async src="https://www.instagram.com/embed.js"></script>
-          </div>
-        </div>
+ <!-- Card 2: Interactive Multi-Video Player -->
+<div class="card social-card">
+  <div class="card-content">
+    <span class="kicker">ON THE ISSUES</span>
+    <h3>Watch Dr. Braun on Key Issues</h3>
+    
+    <!-- Main Player Window -->
+    <div class="video-container">
+      <video id="campaignVideo" controls poster="assets/images/poster-water-rates.jpg" preload="metadata">
+        <source id="videoSource" src="assets/videos/dr-braun-water-rates.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-        <div class="social-button-group">
-          <a href="https://www.instagram.com/braunfordiamondbar" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            Instagram
-          </a>
-          <a href="https://www.facebook.com/Dr.MichaelBraun" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-            Facebook
-          </a>
-        </div>
-      </div>
+    <!-- Topic Selector Pills -->
+    <div class="video-topic-pills">
+      <button class="topic-pill active" onclick="switchVideo('assets/videos/dr-braun-water-rates.mp4', 'assets/images/poster-water-rates.jpg', this)">
+        Water Rates
+      </button>
+      <button class="topic-pill" onclick="switchVideo('assets/videos/dr-braun-conservation.mp4', 'assets/images/poster-conservation.jpg', this)">
+        Conservation
+      </button>
+      <button class="topic-pill" onclick="switchVideo('assets/videos/dr-braun-infrastructure.mp4', 'assets/images/poster-infrastructure.jpg', this)">
+        Infrastructure
+      </button>
+    </div>
+  </div>
+
+  <div class="social-button-group">
+    <a href="https://www.instagram.com/braunfordiamondbar" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">
+      Instagram
+    </a>
+    <a href="https://www.facebook.com/Dr.MichaelBraun" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">
+      Facebook
+    </a>
+  </div>
+</div>
 
     <!-- Card 3: Direct Line & Community Ideas -->
 <div class="card">
