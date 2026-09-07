@@ -398,7 +398,7 @@ h2 { font-size: 2.5rem; }
   justify-content: space-between;
   height: 100%;
   background: #ffffff;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
@@ -408,6 +408,14 @@ h2 { font-size: 2.5rem; }
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+/* Full Width Card Action Buttons */
+.btn-card-action {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 /* Featured Card Variant (Get Involved CTA) */
@@ -426,17 +434,21 @@ h2 { font-size: 2.5rem; }
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Social Embed & Button Group */
+/* Cleaned Instagram Embed Wrapper */
 .instagram-embed-wrapper {
   margin-top: 1rem;
-  max-height: 280px;
-  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
   border-radius: 8px;
-  border: 1px solid var(--border-color);
 }
 
 .instagram-embed-wrapper iframe {
   width: 100% !important;
+  min-width: 100% !important;
+  border-radius: 8px !important;
+  margin: 0 !important;
 }
 
 .social-button-group {
