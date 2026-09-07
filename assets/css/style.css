@@ -332,7 +332,7 @@ h2 { font-size: 2.5rem; }
    9. Endorsements Section (Pure White Backdrop, 3x3 Grid)
    ========================================================================== */
 .endorsements-section {
-  background-color: #ffffff; /* Sets background back to Pure White */
+  background-color: #ffffff;
   padding: 5rem 0;
 }
 
@@ -432,6 +432,20 @@ h2 { font-size: 2.5rem; }
 
 .card.card-featured p {
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contrast Fix: White Button for High Contrast inside Navy Card */
+.card-featured .btn-primary {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  border-color: #ffffff;
+  font-weight: 700;
+}
+
+.card-featured .btn-primary:hover {
+  background-color: var(--bg-light-blue);
+  color: var(--primary-color);
+  border-color: var(--bg-light-blue);
 }
 
 /* Cleaned Instagram Embed Wrapper */
