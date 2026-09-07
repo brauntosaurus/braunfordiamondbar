@@ -201,6 +201,46 @@ h2 { font-size: 2.5rem; }
 }
 
 /* ==========================================================================
+   Endorsements Grid
+   ========================================================================== */
+.endorsements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.endorsement-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.endorsement-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  border-color: var(--accent-color);
+}
+
+.endorsement-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.endorsement-card p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
    Action & Social Grid
    ========================================================================== */
 .action-grid-centered {
