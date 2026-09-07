@@ -381,24 +381,25 @@ h2 { font-size: 2.5rem; }
 /* ==========================================================================
    Footer
    ========================================================================== */
-/* Minimalist Campaign Footer */
 .site-footer {
-  background-color: var(--bg-light-blue);
-  padding: 3.5rem 0;
-  border-top: 1px solid var(--border-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Pushes everything all the way to the left */
+  align-items: center; /* Centers both items horizontally */
+  text-align: center;
   gap: 1.25rem;
 }
 
-/* Boxed Paid-For Disclaimer */
+/* White-Bordered Disclaimer Box */
 .disclaimer-box {
-  border: 1.5px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1.5px solid #ffffff;
+  color: #ffffff;
   padding: 0.75rem 1.25rem;
   font-weight: 700;
   font-size: 0.85rem;
@@ -409,9 +410,8 @@ h2 { font-size: 2.5rem; }
 
 /* Copyright Notice */
 .copyright-text {
-  color: var(--text-dark);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.85rem;
-  opacity: 0.85;
 }
 
 /* ==========================================================================
