@@ -36,7 +36,39 @@
   closeButton?.addEventListener('click', closeMenu);
   overlay?.addEventListener('click', closeMenu);
   drawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', (event) => {
+ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && drawer?.classList.contains('active')) closeMenu();
   });
+
+  /* ==========================================================================
+     Multi-Video Topic Switcher (Action Section)
+     ========================================================================== */
+  const video = document.getElementById('campaignVideo');
+  const source = document.getElementById('videoSource');
+  const topicPills = document.querySelectorAll('.topic-pill');
+
+  if (video && source && topicPills.length > 0) {
+    topicPills.forEach(pill => {
+      pill.addEventListener('click', (event) => {
+        const selectedPill = event.currentTarget;
+        const videoSrc = selectedPill.dataset.video;
+        const posterSrc = selectedPill.dataset.poster;
+
+        if (!videoSrc) return;
+
+        // Pause current playback, update source and poster, then reload
+        video.pause();
+        source.src = videoSrc;
+        if (posterSrc) {
+          video.poster = posterSrc;
+        }
+        video.load();
+
+        // Update pill active styling state
+        topicPills.forEach(p => p.classList.remove('active'));
+        selectedPill.classList.add('active');
+      });
+    });
+  }
+
 })();
