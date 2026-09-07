@@ -14,14 +14,6 @@
   --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-:root {
-  
-  
-  
-  
-  
-}
-
 * { 
   box-sizing: border-box; 
   margin: 0; 
@@ -211,6 +203,29 @@ h2 { font-size: 2.5rem; }
   display: inline-block;
 }
 
+/* Refined Yellow Action Badges */
+.badge-elect {
+  background-color: #fbc02d; /* Polished Campaign Gold/Yellow */
+  color: var(--primary-color); /* Dark Navy text for maximum contrast */
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-vote-pill {
+  background-color: #fff9c4; /* Soft Gold Tint */
+  color: #856404; /* Dark Amber/Navy Text */
+  border: 1px solid #fbc02d;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
 /* ==========================================================================
    Stats Bar
    ========================================================================== */
