@@ -112,3 +112,12 @@ h2 { font-size: 2.5rem; }
   .site-nav.active { display: block; }
   .site-nav ul { flex-direction: column; gap: 1rem; text-align: center; }
 }
+
+/* ==========================================================================
+   Instagram Embed Wrapper
+   ========================================================================== */
+.social-embed-wrapper {
+  max-width: 540px; /* Instagram's native max-width */
+  margin: 2rem auto;
+  min-height: 500px; /* Prevents layout shift while loading */
+}
