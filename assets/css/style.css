@@ -377,7 +377,7 @@ h2 { font-size: 2.5rem; }
 }
 
 /* ==========================================================================
-   10. Action & Social Grid Section (Ice Blue Backdrop)
+   10. Action & Social Section
    ========================================================================== */
 .action-section {
   background-color: var(--bg-light-blue);
@@ -391,6 +391,7 @@ h2 { font-size: 2.5rem; }
   align-items: stretch;
 }
 
+/* Base Card Styles */
 .card {
   display: flex;
   flex-direction: column;
@@ -400,6 +401,7 @@ h2 { font-size: 2.5rem; }
   padding: 1.5rem;
   border-radius: 12px;
   border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .card-content {
@@ -408,12 +410,33 @@ h2 { font-size: 2.5rem; }
   flex-grow: 1;
 }
 
+/* Featured Card Variant (Get Involved CTA) */
+.card.card-featured {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.card.card-featured h3, 
+.card.card-featured .kicker {
+  color: #ffffff;
+}
+
+.card.card-featured p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Social Embed & Button Group */
 .instagram-embed-wrapper {
   margin-top: 1rem;
   max-height: 280px;
   overflow-y: auto;
   border-radius: 8px;
   border: 1px solid var(--border-color);
+}
+
+.instagram-embed-wrapper iframe {
+  width: 100% !important;
 }
 
 .social-button-group {
