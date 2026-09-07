@@ -642,3 +642,14 @@ h2 { font-size: 2.5rem; }
     padding-bottom: 1rem;
   }
 }
+
+/* Add vertical spacing between paragraphs */
+.about-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+}
+
+/* Remove margin on the last paragraph to keep alignment clean */
+.about-content p:last-child {
+  margin-bottom: 0;
+}
