@@ -112,7 +112,26 @@ h2 { font-size: 2.5rem; }
 /* ==========================================================================
    Priorities Grid
    ========================================================================== */
-.priorities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.priorities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns across on desktop */
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Tablet view (2x2 grid) */
+@media (max-width: 1024px) {
+  .priorities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile view (single stacked column) */
+@media (max-width: 640px) {
+  .priorities-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .priority-card { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 .priority-num { font-size: 3rem; font-weight: 800; color: var(--border-color); display: block; margin-bottom: 1rem; line-height: 1; }
 
