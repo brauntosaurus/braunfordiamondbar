@@ -653,3 +653,12 @@ h2 { font-size: 2.5rem; }
 .about-content p:last-child {
   margin-bottom: 0;
 }
+
+/* Prevent sticky header overlap & add top breathing room */
+#priorities,
+#endorsements,
+section {
+  scroll-margin-top: 90px; /* Adjust based on your header's height */
+  padding-top: 4rem;       /* Adds space above the "PRIORITIES" kicker */
+  padding-bottom: 4rem;    /* Keeps bottom spacing consistent */
+}
