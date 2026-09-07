@@ -121,3 +121,44 @@ h2 { font-size: 2.5rem; }
   margin: 2rem auto;
   min-height: 500px; /* Prevents layout shift while loading */
 }
+
+/* ==========================================================================
+   Centered Action Grid (3-Column)
+   ========================================================================== */
+.action-grid-centered {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr; /* Gives the IG embed slightly more room */
+  gap: 2rem;
+  align-items: start;
+}
+
+.social-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-center-col h2 {
+  font-size: 2rem; /* Scaled down slightly to fit the middle column */
+}
+
+.social-embed-wrapper-compact {
+  width: 100%;
+  max-width: 400px;
+  margin: 1.5rem auto;
+  min-height: 400px;
+}
+
+/* Ensure the cards have a white background so they pop against the light-blue section */
+.action-card.bg-light {
+  background-color: #ffffff;
+}
+
+/* Mobile Responsiveness for the New Grid */
+@media (max-width: 1000px) {
+  .action-grid-centered {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
