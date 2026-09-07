@@ -241,19 +241,24 @@
       </video>
     </div>
 
-    <!-- Topic Selector Pills -->
-    <div class="video-topic-pills">
-      <button class="topic-pill active" onclick="switchVideo('assets/videos/dr-braun-water-rates.mp4', 'assets/images/poster-water-rates.jpg', this)">
-        Water Rates
-      </button>
-      <button class="topic-pill" onclick="switchVideo('assets/videos/dr-braun-conservation.mp4', 'assets/images/poster-conservation.jpg', this)">
-        Conservation
-      </button>
-      <button class="topic-pill" onclick="switchVideo('assets/videos/dr-braun-infrastructure.mp4', 'assets/images/poster-infrastructure.jpg', this)">
-        Infrastructure
-      </button>
-    </div>
-  </div>
+   <!-- Topic Selector Pills -->
+<div class="video-topic-pills">
+  <button class="topic-pill active" 
+          data-video="assets/videos/dr-braun-water-rates.mp4" 
+          data-poster="assets/images/poster-water-rates.jpg">
+    Water Rates
+  </button>
+  <button class="topic-pill" 
+          data-video="assets/videos/dr-braun-conservation.mp4" 
+          data-poster="assets/images/poster-conservation.jpg">
+    Conservation
+  </button>
+  <button class="topic-pill" 
+          data-video="assets/videos/dr-braun-infrastructure.mp4" 
+          data-poster="assets/images/poster-infrastructure.jpg">
+    Infrastructure
+  </button>
+</div>
 
   <div class="social-button-group">
     <a href="https://www.instagram.com/braunfordiamondbar" target="_blank" rel="noopener noreferrer" class="btn btn-outline-blue">
