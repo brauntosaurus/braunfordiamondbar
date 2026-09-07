@@ -348,59 +348,52 @@ h2 { font-size: 2.5rem; }
   margin-bottom: 1rem;
 }
 
-/* Instagram Preview Card Styling */
-.instagram-card-preview {
-  background: #ffffff;
-  padding: 1.25rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+/* Instagram Embed Wrapper */
+.instagram-embed-wrapper {
   margin-top: 1rem;
-  text-align: left;
+  max-height: 320px;
+  overflow-y: auto;
+  border-radius: 8px;
+  background: #ffffff;
 }
 
-.insta-header {
-  display: flex;
-  align-items: center;
+/* Dual Button Row */
+.social-button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
 }
 
-.insta-avatar {
-  width: 42px;
-  height: 42px;
-  background: var(--secondary-color);
-  color: #ffffff;
-  border-radius: 50%;
+/* White Button with Blue Outline */
+.btn-outline-blue {
+  background-color: #ffffff;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  flex-shrink: 0;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.insta-meta strong {
-  display: block;
-  font-size: 0.9rem;
-  color: var(--text-dark);
-  line-height: 1.2;
-}
-
-.insta-meta span {
-  font-size: 0.75rem;
-  color: #666666;
-}
-
-.insta-caption {
-  font-size: 0.85rem;
-  color: var(--text-dark);
-  margin: 0;
-  line-height: 1.4;
+.btn-outline-blue:hover {
+  background-color: var(--secondary-color);
+  color: #ffffff;
 }
 
 /* Responsive Breakpoint */
 @media (max-width: 992px) {
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-button-group {
     grid-template-columns: 1fr;
   }
 }
