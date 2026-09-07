@@ -15,8 +15,10 @@ The site intentionally does not use WordPress, PHP, plugins, or a database.
 * `index.html` — Main campaign page
 * `404.html` — Page-not-found response
 * `assets/css/` — Website styling
-* `assets/js/` — Navigation and interface scripts
+* `assets/docs/` — Campaign literature
 * `assets/images/` — Campaign images and graphics
+* `assets/js/` — Navigation and interface scripts
+* `assets/videos/` — Campaign video clips
 * `_headers` — Security and caching headers
 * `robots.txt` — Search-engine instructions
 * `sitemap.xml` — Search-engine sitemap
