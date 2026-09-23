@@ -329,51 +329,363 @@ h2 { font-size: 2.5rem; }
 }
 
 /* ==========================================================================
-   9. Endorsements Section (Pure White Backdrop, 3x3 Grid)
+   9. Endorsements Showcase
    ========================================================================== */
+
 .endorsements-section {
   background-color: #ffffff;
-  padding: 5rem 0;
 }
 
-.endorsements-grid {
+.endorsements-heading {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.endorsements-heading h2 {
+  margin-bottom: 1rem;
+}
+
+.endorsements-lead {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+
+/* Featured Card
+   ========================================================================== */
+
+.endorsement-showcase {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.featured-endorsement {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  align-items: stretch;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.25fr);
+  min-height: 480px;
+
+  overflow: hidden;
+
+  background: var(--bg-light-blue);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  box-shadow:
+    0 2px 6px rgba(18, 59, 93, 0.04),
+    0 14px 36px rgba(18, 59, 93, 0.08);
 }
 
-.endorsement-card {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  text-decoration: none;
+
+/* Featured Photo
+   ========================================================================== */
+
+.featured-endorsement__photo {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+  background: #dbeaf0;
+}
+
+.featured-endorsement__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 65%,
+      rgba(46, 125, 104, 0.08) 100%
+    );
+
+  pointer-events: none;
+}
+
+.featured-endorsement__photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    opacity 0.22s ease,
+    transform 0.4s ease;
+}
+
+
+/* Featured Content
+   ========================================================================== */
+
+.featured-endorsement__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  padding: clamp(2rem, 5vw, 4rem);
 }
 
-.endorsement-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  border-color: var(--secondary-color);
+.featured-endorsement__content .kicker {
+  margin-bottom: 1.25rem;
 }
 
-.endorsement-card h3 {
-  font-size: 1.25rem;
+.featured-endorsement__quote {
+  position: relative;
+
+  margin: 0 0 2rem;
+  padding: 0;
+
+  border: 0;
+
   color: var(--primary-color);
-  margin-bottom: 0.25rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.45;
 }
 
-.endorsement-card p {
-  font-size: 0.9rem;
-  color: var(--text-dark);
+.featured-endorsement__quote::before {
+  content: "“";
+
+  position: absolute;
+  left: -0.45em;
+  top: -0.22em;
+
+  color: var(--accent-color);
+  font-size: 4rem;
+  line-height: 1;
+
+  opacity: 0.25;
+}
+
+.featured-endorsement__identity h3 {
+  margin: 0 0 0.35rem;
+
+  color: var(--primary-color);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+}
+
+.featured-endorsement__identity p {
+  max-width: 560px;
   margin: 0;
-  opacity: 0.85;
+
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.55;
+
+  opacity: 0.82;
+}
+
+.endorser-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  align-self: flex-start;
+
+  margin-top: 1.75rem;
+
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.endorser-profile-link:hover {
+  color: var(--accent-color);
+}
+
+
+/* Portrait Selector
+   ========================================================================== */
+
+.endorsement-selector {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 0.8rem;
+
+  margin-top: 1.25rem;
+}
+
+.endorsement-selector__item {
+  appearance: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+
+  padding: 0.55rem;
+
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  color: var(--primary-color);
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.endorsement-selector__item:hover {
+  background: var(--bg-light-blue);
+  transform: translateY(-2px);
+}
+
+.endorsement-selector__item.is-active {
+  background: var(--bg-light-blue);
+  border-color: var(--accent-color);
+}
+
+.endorsement-selector__item:focus-visible {
+  outline: 3px solid rgba(25, 118, 163, 0.3);
+  outline-offset: 3px;
+}
+
+
+/* Thumbnail */
+
+.endorsement-selector__photo {
+  width: 78px;
+  height: 78px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  box-shadow: 0 2px 8px rgba(18, 59, 93, 0.14);
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.endorsement-selector__photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.endorsement-selector__item.is-active
+.endorsement-selector__photo {
+  border-color: var(--accent-color);
+  transform: scale(1.04);
+}
+
+.endorsement-selector__name {
+  margin-top: 0.55rem;
+
+  overflow: hidden;
+
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+
+  text-overflow: ellipsis;
+}
+
+
+/* Tablet
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+  .featured-endorsement {
+    grid-template-columns: 0.85fr 1fr;
+    min-height: 420px;
+  }
+
+  .featured-endorsement__photo {
+    min-height: 420px;
+  }
+
+  .featured-endorsement__content {
+    padding: 2.25rem;
+  }
+
+  .endorsement-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* Mobile
+   ========================================================================== */
+
+@media (max-width: 640px) {
+
+  .endorsements-heading {
+    margin-bottom: 2rem;
+  }
+
+  .featured-endorsement {
+    display: block;
+    min-height: 0;
+  }
+
+  .featured-endorsement__photo {
+    height: 360px;
+    min-height: 0;
+  }
+
+  .featured-endorsement__content {
+    padding: 2rem 1.5rem 2.25rem;
+  }
+
+  .featured-endorsement__quote {
+    font-size: 1.25rem;
+  }
+
+  /*
+   * Selector becomes horizontally scrollable rather
+   * than squeezing six portraits onto a phone.
+   */
+  .endorsement-selector {
+    display: flex;
+
+    gap: 0.75rem;
+
+    margin-right: -1.5rem;
+    padding: 0.25rem 1.5rem 0.75rem 0;
+
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .endorsement-selector::-webkit-scrollbar {
+    display: none;
+  }
+
+  .endorsement-selector__item {
+    flex: 0 0 105px;
+    scroll-snap-align: start;
+  }
+
+  .endorsement-selector__photo {
+    width: 68px;
+    height: 68px;
+  }
+
 }
 
 /* ==========================================================================
