@@ -42,7 +42,7 @@
       <span>Braun for Diamond Bar</span>
     </a>
     
-    <nav class="site-nav">
+    <nav id="site-nav" class="site-nav">
       <ul>
         <li><a href="#meet-michael">Meet Michael</a></li>
         <li><a href="#priorities">Priorities</a></li>
@@ -51,7 +51,7 @@
       </ul>
     </nav>
 
-    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+    <button id="mobile-toggle" class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
       ☰
     </button>
   </div>
@@ -182,7 +182,7 @@
           >
         </div>
 
-        <div class="featured-endorsement__content">
+        <div class="featured-endorsement__content" aria-live="polite">
           <span class="kicker">FEATURED ENDORSEMENT</span>
 
           <!-- Hidden automatically until an actual quote is supplied -->
@@ -460,16 +460,9 @@
   </div>
 </footer>
 
-  <!-- Mobile Menu Toggle -->
-  <script>
-    document.getElementById('mobile-toggle').addEventListener('click', function() {
-      document.getElementById('site-nav').classList.toggle('active');
-    });
-  </script>
-
-  <!-- Deferred Instagram Embed Script (Must be at the very bottom) -->
+  <!-- Deferred scripts -->
   <script async src="https://www.instagram.com/embed.js" defer></script>
-  <script src="assets/js/endorsements.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
 
 </body>
 </html>
