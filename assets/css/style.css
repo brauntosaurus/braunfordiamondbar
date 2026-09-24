@@ -160,12 +160,19 @@ h2 { font-size: 2.5rem; }
   color: var(--accent-color); 
 }
 
-.mobile-menu-toggle { 
-  display: none; 
-  background: none; 
-  border: none; 
-  cursor: pointer; 
-  color: var(--primary-color); 
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 /* ==========================================================================
